@@ -63,9 +63,8 @@ in that order and include it via a script tag. The module exposes a global varia
 
 ## Examples
 
-See `test/test.js` file and [this test file][1] from a sister project for examples of how to use this package.
-
-    [1]: https://github.com/peey/compose-simple-middleware/blob/master/test/test.js
+See `test/test.js` file and [this test file](https://github.com/peey/compose-simple-middleware/blob/master/test/test.js) 
+from a sister project for examples of how to use this package.
     
 ## License
 
