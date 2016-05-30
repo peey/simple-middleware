@@ -1,8 +1,10 @@
 /* jshint asi:true */
 ;(function () {
   
-  var compose = typeof require !== "undefined"? require("../../compose-simple-middleware/src/compose-simple-middleware.js") : window['module:peey/compose-simple-middleware'] ;
+  /* importing */
+  var compose = typeof require !== "undefined"? require("compose-simple-middleware") : window.composeMiddleware ;
   
+  /* actual code */
   var Middleware = function () {
     this.context = {}
     this.list = []
@@ -26,8 +28,7 @@
   
   // for browsers
   if (typeof window !== "undefined") {
-    window['module:peey/simple-middleware'] = Middleware
-    if (typeof window.composeMiddleware === "undefined") window.Middleware = Middleware ; // don't overwrite variable if it exists
+    window.Middleware = Middleware;
   }
 
 })();
