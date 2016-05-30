@@ -1,13 +1,13 @@
 {
-  "dependencies": {
-    "compose-simple-middleware": "^0.1.1"
-  },
   "name": "simple-middleware",
   "description": "A package implementing the middleware pattern.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "src/simple-middleware.js",
   "directories": {
     "test": "test"
+  },
+  "dependencies": {
+    "compose-simple-middleware": "^0.1.1"
   },
   "devDependencies": {},
   "scripts": {

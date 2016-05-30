@@ -1,0 +1,110 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish' ]
+2 info using npm@3.8.6
+3 info using node@v6.0.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: 'G:\\peey\\production\\opensource\\simple-middleware',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory C:\Users\Peeyush\AppData\Roaming\npm-cache\simple-middleware\0.1.0\package.tgz not in flight; packing
+9 verbose correctMkdir C:\Users\Peeyush\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+10 info lifecycle simple-middleware@0.1.0~prepublish: simple-middleware@0.1.0
+11 silly lifecycle simple-middleware@0.1.0~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ 'C:\\Users\\Peeyush\\AppData\\Roaming\\npm-cache\\simple-middleware\\0.1.0\\package.tgz',
+12 verbose tar pack   'G:\\peey\\production\\opensource\\simple-middleware' ]
+13 verbose tarball C:\Users\Peeyush\AppData\Roaming\npm-cache\simple-middleware\0.1.0\package.tgz
+14 verbose folder G:\peey\production\opensource\simple-middleware
+15 verbose addLocalTarball adding from inside cache C:\Users\Peeyush\AppData\Roaming\npm-cache\simple-middleware\0.1.0\package.tgz
+16 verbose correctMkdir C:\Users\Peeyush\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+17 silly cache afterAdd simple-middleware@0.1.0
+18 verbose afterAdd C:\Users\Peeyush\AppData\Roaming\npm-cache\simple-middleware\0.1.0\package\package.json not in flight; writing
+19 verbose correctMkdir C:\Users\Peeyush\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+20 verbose afterAdd C:\Users\Peeyush\AppData\Roaming\npm-cache\simple-middleware\0.1.0\package\package.json written
+21 silly publish { dependencies: { 'compose-simple-middleware': '^0.1.1' },
+21 silly publish   name: 'simple-middleware',
+21 silly publish   description: 'A package implementing the middleware pattern.',
+21 silly publish   version: '0.1.0',
+21 silly publish   main: 'src/simple-middleware.js',
+21 silly publish   directories: { test: 'test' },
+21 silly publish   devDependencies: {},
+21 silly publish   scripts: { test: 'mocha' },
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git://github.com/peey/simple-middleware.git' },
+21 silly publish   keywords: [ 'middleware' ],
+21 silly publish   author: { name: 'Peeyush Kushwaha', email: 'peeyush.p97@gmail.com' },
+21 silly publish   license: 'MIT',
+21 silly publish   bugs: { url: 'https://github.com/peey/simple-middleware/issues' },
+21 silly publish   homepage: 'https://github.com/peey/simple-middleware#readme',
+21 silly publish   readme: '# simple-middleware\r\n\r\nA package implementing the middleware pattern.\r\n\r\n## Example Usage\r\n\r\n```js\r\n/**\r\n * A library for returning base64 representation of image of *any* kind\r\n */\r\nvar Middleware = require("simple-middleware")\r\n\r\nimageToBase64Middleware = new Middleware()\r\n\r\nimageToBase64Middleware.use(function (context, next) {\r\n  context.imageExtension = getExtensionFromFileName(context.fileName)\r\n  return next()\r\n})\r\n\r\n// if jpeg\r\nimageToBase64Middleware.use(function (context, next) {\r\n  if (context.imageExtension === \'jpeg\' || context.imageExtension === \'jpg\') {\r\n    // code for jpeg to Base64 goes here\r\n    return result\r\n  } else {\r\n    return next()\r\n  }\r\n})\r\n\r\n// if png\r\nimageToBase64Middleware.use(function (context, next) {\r\n  ...\r\n})\r\n\r\n...\r\n\r\n// if tiff\r\n\r\nimageToBase64Middleware.use(function (context, next) {\r\n  if (context.imageExtension === \'tiff\') {\r\n    // code for tiff to Base64 goes here\r\n    return result\r\n  } else {\r\n    return next() // if there is no next(), null is returned\r\n  }\r\n})\r\n\r\n// add more code here in future when support for another new image type is needed\r\n\r\nmodule.exports = function (fileName, imageFileContents) {\r\n  return imageToBase64Middleware.run({imageFileContents : imageFileContents, fileName: fileName})\r\n}\r\n```\r\n\r\n\r\n## Installation\r\n\r\nIf you want to use this in node.js, simply install via npm using `npm install simple-middleware` and in\r\nyour code use it by `var Middleware = require("simple-middleware")`\r\n\r\nIf you want to use this in browser, simply download the compose-simple-middleware.js and simple-middleware.js files \r\nin that order and include it via a script tag. The module exposes a global variable called `Middleware`.\r\n\r\n## Examples\r\n\r\nSee `test/test.js` file and [this test file](https://github.com/peey/compose-simple-middleware/blob/master/test/test.js) \r\nfrom a sister project for examples of how to use this package.\r\n    \r\n## License\r\n\r\nMIT License. See LICENSE file.',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: '5a12f8ecfe75ee4d6018d0f964c22c4ea11e7115',
+21 silly publish   _id: 'simple-middleware@0.1.0',
+21 silly publish   _shasum: '9437554777d7f5e0f4df748c876b53492f0de402',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name simple-middleware
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'simple-middleware',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   name: 'simple-middleware',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/simple-middleware
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading C:\Users\Peeyush\AppData\Roaming\npm-cache\simple-middleware\0.1.0\package.tgz
+30 verbose request uri https://registry.npmjs.org/simple-middleware
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 10:09:15 PM
+33 verbose request using bearer token for auth
+34 verbose request id b7f41f4f36442b26
+35 http request PUT https://registry.npmjs.org/simple-middleware
+36 http 403 https://registry.npmjs.org/simple-middleware
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '95',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Mon, 30 May 2016 16:39:20 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-ams4138-AMS',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1464626359.713924,VS0,VE1023',
+37 verbose headers   vary: 'Accept-Encoding' }
+38 verbose request invalidating C:\Users\Peeyush\AppData\Roaming\npm-cache\registry.npmjs.org\simple-middleware on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: "You cannot publish over the previously published version 0.1.0." : simple-middleware
+40 verbose stack     at makeError (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:264:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:252:14)
+40 verbose stack     at Request._callback (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:172:14)
+40 verbose stack     at Request.self.callback (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:199:22)
+40 verbose stack     at emitTwo (events.js:106:13)
+40 verbose stack     at Request.emit (events.js:191:7)
+40 verbose stack     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1036:10)
+40 verbose stack     at emitOne (events.js:101:20)
+40 verbose stack     at Request.emit (events.js:188:7)
+40 verbose stack     at IncomingMessage.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:963:12)
+41 verbose statusCode 403
+42 verbose pkgid simple-middleware
+43 verbose cwd G:\peey\production\opensource\simple-middleware
+44 error Windows_NT 6.1.7601
+45 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+46 error node v6.0.0
+47 error npm  v3.8.6
+48 error code E403
+49 error "You cannot publish over the previously published version 0.1.0." : simple-middleware
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]
